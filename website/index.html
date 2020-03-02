@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>MyBlogWebsite</title>
+</head>
+<body>
+			<header>
+			  <div class="container">
+				<div class="header-logo">
+					UploadIt.com
+				</div>
+				<nav class="nav-bar">
+					<ul class="nav-ul">
+						<li class="nav-list">
+							<a href="#home" class="nav-link scroll">
+								Home
+							</a>
+						</li>
+						<li class="nav-list">
+							<a href="#about" class="nav-link scroll">
+								About
+							</a>
+						</li>
+						<li class="nav-list">
+							<a href="#" class="nav-link scroll">
+								Services
+							</a>
+						</li>
+						<li class="nav-list">
+							<a href="#" class="nav-link scroll">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="sign-in">
+					Sign In
+				</div>
+			</div>
+			</header>
+			<!-- signIn form -->
+			<div class="sign-in-form">
+					<h1>LogIn</h1>
+					<form action="login.php" method="POST">
+						<input type="email" name="email" placeholder="Email..." required="">
+						<input type="password" name="pass" placeholder="Password..." required="">
+						<button type="submit" class="btn login-btn" name="login_submit">Login</button>
+						<a href="#" class="forgot">Forgot Password?</a>
+					</form>
+				</div>
+			<section id="home" class="main">
+				<div class="container">
+					<div class="showcase">
+						<div class="showcase-banner">
+							<h1>Upload Your Photos</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam officia, aspernatur ad quaerat ipsum nihil quod iste asperiores doloribus dolorum.</p>
+							<a href="#about" class="btn banner-btn scroll">Learn More</a>
+						</div>
+						<div>
+							<img src="images/banner-img.jpg" class="banner-img" alt="wall-image">
+						</div>
+					</div>
+				</div>
+	</section>
+	<section id="about" class="about">
+		<div class="container">
+			<div class="about-content">
+				<div class="about-content-img">
+					<img src="images/about-img.jpg" class="about-img" alt="">
+				</div>
+				<div class="about-text">
+					<h1>About Me</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia asperiores nisi fuga cupiditate necessitatibus odit eveniet in, vero expedita, ipsam doloribus possimus, pariatur sint esse! Libero iusto commodi nisi neque obcaecati repellendus omnis natus architecto voluptatem</p><br>
+					<ul class="info" style="list-style: circle;">
+						<li>John Reygun Danag</li>
+						<li>17 year's old</li>
+						<li>Palawan, Philippines</li>
+						<li>0976439528</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+  
+  var scrollLink = $('.scroll');
+  
+  // Smooth scrolling
+  scrollLink.click(function(e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: $(this.hash).offset().top
+    }, 1000 );
+  });
+
+});
+	</script>
+</body>
+</html>
